@@ -3,99 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSDev</title>
+    <title>JSDev - Desarrollo de Aplicaciones Android</title>
+    <meta name="description" content="JSDev es un equipo de desarrollo de aplicaciones Android que crea soluciones innovadoras y fáciles de usar. Conoce más sobre nuestras aplicaciones como NoteMover, diseñadas para mejorar la productividad y organización.">
+    <meta name="author" content="JSDev">
+    <meta name="keywords" content="JSDev, desarrollador de aplicaciones Android, NoteMover, desarrollo de software, aplicaciones móviles, productividad, tareas, notas">
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
             margin: 0;
+            padding: 0;
             background-color: #f4f4f4;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
         }
-        .app-image {
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .intro {
+            text-align: center;
+            padding: 20px 0; /* Reducción del padding para minimizar el espacio */
+        }
+        .intro h2 {
+            font-size: 2em;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px; /* Reducción del margen superior */
+        }
+        .project {
+            background: white;
+            margin: 20px;
+            padding: 20px;
+            width: 30%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .project img {
             max-width: 100%;
             height: auto;
-            margin: 20px 0;
+            border-radius: 8px;
         }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
+        .project h3 {
+            margin-top: 15px;
+            font-size: 1.5em;
+        }
+        .project p {
+            font-size: 1em;
+            line-height: 1.5;
+        }
+        .footer {
             background-color: #007bff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
         }
-        .button:hover {
-            background-color: #0056b3;
+        .footer p {
+            margin: 0;
         }
-        .description {
-            text-align: left;
+        .team {
+            margin-top: 40px; /* Reducción del margen superior */
+        }
+        .team h2 {
+            text-align: center;
+            font-size: 2em;
+        }
+        .team-members {
+            display: flex;
+            justify-content: center;
             margin-top: 20px;
-            line-height: 1.6;
         }
-        .app-list {
-            list-style-type: none;
-            padding: 0;
+        .member {
+            margin: 0 20px;
+            text-align: center;
         }
-        .app-list li {
+        .member img {
+            border-radius: 50%;
+            max-width: 150px;
+        }
+        .member h3 {
             margin: 10px 0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Bienvenido a JSDev</h1>
-        <p>Descubre nuestras aplicaciones Android desarrolladas con dedicación y esfuerzo.</p>
-        
-        <!-- Sección de nuestras aplicaciones Android -->
-        <h2>Nuestras Aplicaciones Android</h2>
-        <ul class="app-list">
-            <li>NoteMover: <a href="https://play.google.com/store/apps/details?id=com.jsdev.newnotes&pcampaignid=web_share" target="_blank">Descargar</a></li>
-            <!-- Añadir más aplicaciones según sea necesario -->
-        </ul>
+    <!-- Encabezado -->
+    <header class="header">
+        <h1>JSDev - Desarrollo de Aplicaciones Android</h1>
+    </header>
 
-        <!-- Imagen de la aplicación NoteMover -->
-        <img src="https://play-lh.googleusercontent.com/HvpKd-5usBqfMuwuvcHAD6gHrwAJ6WQyVGunM4DUgodWi5W81bETu6KRiz6YPSUPsA8=w240-h480-rw" alt="Imagen de la aplicación NoteMover" class="app-image">
+    <!-- Navegación -->
+    <nav class="nav">
+        <a href="#about">Sobre Nosotros</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
+    </nav>
 
-        <!-- Descripción de la aplicación NoteMover -->
-        <div class="description">
-            <h2>NoteMover - Bloc de notas</h2>
-            <h3>Información de la aplicación</h3>
-            <p><strong>NoteMover - Aplicación de Notas y Organizador de Tareas</strong></p>
-            <p>NoteMover es una aplicación de notas fácil de usar, diseñada para teléfonos, Chrome OS y tablets Android. Ideal para gestionar tus notas, listas de tareas y recordatorios, NoteMover te ayuda a mantenerte organizado y productivo en tu día a día con una interfaz intuitiva y funcional.</p>
-            <h4>Principales Funcionalidades:</h4>
-            <ul>
-                <li><strong>Creación y Edición de Notas:</strong> Crea, edita y guarda notas de texto rápidamente. Personaliza cada nota con diferentes colores para una mejor organización y visualización.</li>
-                <li><strong>Movimiento de Notas con Flechas:</strong> Organiza tus notas de manera única moviéndolas fácilmente hacia arriba o hacia abajo usando flechas. Esta funcionalidad te permite ajustar la posición de tus notas para mantener siempre a la vista lo más importante.</li>
-                <li><strong>Listas de Tareas y Recordatorios:</strong> Con amplio espacio disponible, puedes crear listas y recordatorios dentro de las notas sin restricciones.</li>
-            </ul>
-            <h4>Experiencia de Usuario Optimizada:</h4>
-            <ul>
-                <li><strong>Interfaz Intuitiva:</strong> Disfruta de una experiencia de usuario fluida con una interfaz limpia y fácil de navegar. Personaliza cada nota con colores para una visualización clara.</li>
-                <li><strong>Publicidad No Intrusiva:</strong> Los anuncios están integrados de manera discreta en un pequeño banner, asegurando que no interfieran con tu flujo de trabajo.</li>
-            </ul>
-            <h4>¿Por qué elegir NoteMover?</h4>
-            <ul>
-                <li><strong>Movimiento de Notas Exclusivo:</strong> La funcionalidad de mover notas con flechas es una característica distintiva de NoteMover, permitiéndote organizar tus notas de manera eficiente y personalizada.</li>
-                <li><strong>Optimizado para Tablets y Teléfonos Android:</strong> NoteMover ofrece una experiencia fluida tanto en tablets como en teléfonos Android, adaptándose perfectamente a pantallas grandes y pequeñas.</li>
-                <li><strong>Bloc de Notas Completo:</strong> Es más que un simple bloc de notas; es una herramienta versátil que te ayuda a gestionar tus notas, listas de tareas y recordatorios con facilidad.</li>
-            </ul>
-            <p>¡Descarga NoteMover y empieza a organizar tu vida de manera eficiente! Mantente atento a nuestras futuras actualizaciones, donde introduciremos nuevas características para mejorar aún más tu experiencia.</p>
-            <p>Contáctanos: Si tienes alguna pregunta o sugerencia, no dudes en enviarnos un correo electrónico a <a href="mailto:teamjsdev@gmail.com">teamjsdev@gmail.com</a>.</p>
+    <!-- Introducción -->
+    <section class="intro" id="about">
+        <div class="container">
+            <h2>Innovación en Desarrollo de Aplicaciones Móviles</h2>
+            <p>En JSDev, nos especializamos en el desarrollo de aplicaciones Android con un enfoque en la usabilidad, el diseño intuitivo y la productividad. Nuestro equipo se dedica a crear aplicaciones que realmente hagan la diferencia en la vida de nuestros usuarios.</p>
         </div>
-        
-        <!-- Botón con enlace a la Play Store -->
-        <a href="https://play.google.com/store/apps/details?id=com.jsdev.newnotes&pcampaignid=web_share" class="button" target="_blank">Descargar NoteMover</a>
-    </div>
+    </section>
+
+    <!-- Proyectos Destacados -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2>Nuestras Aplicaciones</h2>
+            <div class="project">
+                <img src="https://play-lh.googleusercontent.com/XNqH4ZgkUvytJMXkWwJudfG6dM-OfwsIPq6hN7wrg5Y_QOj2LO4v5vf63VWQlD2scMk=w240-h480-rw" alt="Aplicación NoteMover">
+                <h3>NoteMover</h3>
+		<!-- Botón que lleva a otra página HTML -->
+        	<a href="otras-apps.html" class="button" target="_blank">Ver más detalles sobre la app</a>
+                <p>NoteMover es una aplicación de notas y organizador diseñada para ayudarte a mantener tus ideas en orden. Personaliza tus notas con colores, organiza tareas y más.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.jsdev.newnotes&pcampaignid=web_share" class="button" target="_blank">Descargar en Google Play</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo -->
+    <section class="team" id="team">
+        <div class="container">
+            <h2>Conoce al Equipo</h2>
+            <div class="team-members">
+                <div class="member">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQH9GZZALyymww/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1682361138996?e=1732147200&v=beta&t=WSZWPUZ6GFK-rhYyowIh-ZRX3d73cDcHfiJMis-7VqI" alt="Miembro del equipo">
+                    <h3>Joaquin Sanchez</h3>
+                    <p>Desarrollador Android y fundador de JSDev. Apasionado por el desarrollo de aplicaciones móviles centradas en el usuario.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <p>&copy; 2024 JSDev - Todos los derechos reservados.</p>
+            <p>Contáctanos: <a href="mailto:teamjsdev@gmail.com">teamjsdev@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <!-- Rich Snippet para SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "JSDev",
+      "url": "https://teamjsdev.github.io",
+      "logo": "https://teamjsdev.github.io/logo.png",
+      "description": "JSDev es un equipo de desarrollo de aplicaciones móviles Android enfocado en productividad y diseño intuitivo.",
+      "sameAs": [
+        "https://www.facebook.com/JSDev",
+        "https://www.twitter.com/JSDev"
+      ]
+    }
+    </script>
 </body>
 </html>
