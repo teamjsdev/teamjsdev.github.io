@@ -53,21 +53,37 @@
         .app-list li {
             margin: 10px 0;
         }
+        /* Ajuste de la relación de aspecto del video a 16:9 */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Altura 16:9 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>NoteMover - Aplicación de Notas y Organizador de Tareas para Android</h1>
-        <p>Descubre nuestras aplicaciones Android desarrolladas con dedicación y esfuerzo.</p>
-        
-        <!-- Sección de nuestras aplicaciones Android -->
-        <h2>Nuestras Aplicaciones Android</h2>
-        <ul class="app-list">
-            <li>NoteMover: <a href="https://play.google.com/store/apps/details?id=com.jsdev.newnotes&pcampaignid=web_share" target="_blank">Descargar</a></li>
-        </ul>
 
         <!-- Imagen de la aplicación NoteMover -->
         <img src="https://play-lh.googleusercontent.com/XNqH4ZgkUvytJMXkWwJudfG6dM-OfwsIPq6hN7wrg5Y_QOj2LO4v5vf63VWQlD2scMk=w240-h480-rw" alt="NoteMover Aplicación de Notas Android" class="app-image">
+
+        <!-- Video de YouTube integrado -->
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/JwRHb79M4so" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
 
         <!-- Descripción de la aplicación NoteMover -->
         <div class="description">
@@ -123,3 +139,4 @@
     </script>
 </body>
 </html>
+
