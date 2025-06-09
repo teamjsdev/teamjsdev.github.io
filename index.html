@@ -149,13 +149,6 @@
       </div>
     </section>
 
-    <!-- Introducción -->
-    <section class="intro" id="projects">
-        <div class="container">
-            <h2>Nuestras Aplicaciones</h2>
-        </div>
-    </section>
-
     <!-- Proyectos Destacados -->
     <section class="projects" id="projects">
         <div class="project">
@@ -209,27 +202,26 @@
     }
     </script>
 
-    <script>
-      // Mostrar/ocultar texto extra al hacer clic en "Sobre Nosotros"
-      document.getElementById('about-link').addEventListener('click', function(e){
-        e.preventDefault();
-        const extra = document.getElementById('extra-about');
-        if(extra.style.display === 'none') {
-          extra.style.display = 'block';
-          extra.scrollIntoView({behavior: 'smooth'});
-        } else {
-          extra.style.display = 'none';
-        }
-      });
+   <script>
+  // Mostrar/ocultar texto extra al hacer clic en "Sobre Nosotros"
+  document.getElementById('about-link').addEventListener('click', function(e){
+    e.preventDefault();
+    const extra = document.getElementById('extra-about');
+    if(extra.style.display === 'none') {
+      extra.style.display = 'block';
+    } else {
+      extra.style.display = 'none';
+    }
+  });
 
-      // Ocultar texto extra y subir al inicio cuando se hace clic en "Inicio"
-      document.getElementById('inicio-link').addEventListener('click', function(e){
-        e.preventDefault();
-        const extra = document.getElementById('extra-about');
-        extra.style.display = 'none';
-        window.scrollTo({top: 0, behavior: 'smooth'});
-      });
-    </script>
+  // Ocultar texto extra y subir al inicio cuando se hace clic en "Inicio"
+  document.getElementById('inicio-link').addEventListener('click', function(e){
+    e.preventDefault();
+    const extra = document.getElementById('extra-about');
+    extra.style.display = 'none';
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+</script>
 
 </body>
 </html>
