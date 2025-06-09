@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>JSDev - Desarrollo de Software</title>
-    <meta name="description" content="JSDev es un equipo de desarrollo de aplicaciones Android que crea soluciones innovadoras y fáciles de usar. Conoce más sobre nuestras aplicaciones como NoteMover, diseñadas para mejorar la productividad y organización.">
-    <meta name="author" content="JSDev">
-    <meta name="keywords" content="JSDev, desarrollador de aplicaciones Android, NoteMover, desarrollo de software, aplicaciones móviles, productividad, tareas, notas">
+    <meta name="description" content="JSDev es un equipo de desarrollo de aplicaciones Android que crea soluciones innovadoras y fáciles de usar. Conoce más sobre nuestras aplicaciones como NoteMover, diseñadas para mejorar la productividad y organización." />
+    <meta name="author" content="JSDev" />
+    <meta name="keywords" content="JSDev, desarrollador de aplicaciones Android, NoteMover, desarrollo de software, aplicaciones móviles, productividad, tareas, notas" />
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -33,6 +33,7 @@
             text-decoration: none;
             color: #007bff;
             font-weight: bold;
+            cursor: pointer;
         }
         .container {
             max-width: 1200px;
@@ -41,7 +42,7 @@
         }
         .intro {
             text-align: center;
-            padding: 20px 0;
+            padding: 0px 0;
         }
         .intro h2 {
             font-size: 2em;
@@ -62,8 +63,8 @@
             text-align: center;
         }
         .project img {
-            max-width: 150px; /* Ajusta según necesites */
-    	    height: auto;
+            max-width: 150px;
+            height: auto;
             border-radius: 24px;
         }
         .project h3 {
@@ -115,7 +116,7 @@
             text-align: center;
         }
         .member img {
-            border-radius: 50%;
+            border-radius: 0%;
             max-width: 150px;
         }
         .member h3 {
@@ -131,22 +132,25 @@
 
     <!-- Navegación -->
     <nav class="nav">
-        <a href="#about">Sobre Nosotros</a>
-        <a href="#about2">Sobre Nosotros</a>
+        <a href="#inicio" id="inicio-link">Inicio</a>
+        <a href="#about" id="about-link">Sobre Nosotros</a>
+        <a href="#about2">Conoce al Equipo</a>
         <a href="#projects">Proyectos</a>
         <a href="#contact">Contacto</a>
     </nav>
 
-    <!-- Introducción -->
     <section class="intro" id="about">
-        <div class="container">
-            <h2>Innovación en Desarrollo de Aplicaciones Móviles</h2>
-            <p>En JSDev, nos especializamos en el desarrollo de aplicaciones Android con un enfoque en la usabilidad, el diseño intuitivo y la productividad. Nuestro equipo se dedica a crear aplicaciones que realmente hagan la diferencia en la vida de nuestros usuarios.</p>
-        </div>
+      <div class="container">
+        <h2>Innovación en Desarrollo de Aplicaciones Móviles</h2>
+        <p>JSDev es un proyecto personal dedicado al desarrollo de aplicaciones Android con foco en la usabilidad, el diseño simple y la utilidad real. Cada aplicación busca aportar algo útil y positivo a la vida de quienes la usan.</p>
+        <p id="extra-about" style="display:none; margin-top: 1em;">
+          Soy farmacéutico y desarrollador de software, y fundé JSDev como un espacio para combinar ambas pasiones. Me especializo en el desarrollo de aplicaciones Android con un enfoque en la usabilidad, el diseño intuitivo y la productividad. A través de JSDev, busco crear herramientas útiles que realmente aporten valor a la vida de los usuarios.
+        </p>
+      </div>
     </section>
 
-<!-- Introducción -->
-    <section class="intro" id="about2">
+    <!-- Introducción -->
+    <section class="intro" id="projects">
         <div class="container">
             <h2>Nuestras Aplicaciones</h2>
         </div>
@@ -154,35 +158,32 @@
 
     <!-- Proyectos Destacados -->
     <section class="projects" id="projects">
+        <div class="project">
+            <img src="https://play-lh.googleusercontent.com/XNqH4ZgkUvytJMXkWwJudfG6dM-OfwsIPq6hN7wrg5Y_QOj2LO4v5vf63VWQlD2scMk=w240-h480-rw" alt="Aplicación NoteMover" />
+            <h3>NoteMover</h3>
+            <p>NoteMover es una aplicación de notas y organizador diseñada para ayudarte a mantener tus ideas en orden. Personaliza tus notas con colores, organiza tareas y más.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.jsdev.newnotes&pcampaignid=web_share" class="button" target="_blank" rel="noopener">Descargar en Google Play</a>
+            <a href="otras-apps.html" class="button" target="_blank" rel="noopener">Ver más detalles sobre la app</a>
+        </div>
 
-            <div class="project">
-                <img src="https://play-lh.googleusercontent.com/XNqH4ZgkUvytJMXkWwJudfG6dM-OfwsIPq6hN7wrg5Y_QOj2LO4v5vf63VWQlD2scMk=w240-h480-rw" alt="Aplicación NoteMover">
-                <h3>NoteMover</h3>
-                <p>NoteMover es una aplicación de notas y organizador diseñada para ayudarte a mantener tus ideas en orden. Personaliza tus notas con colores, organiza tareas y más.</p>
-                <a href="https://play.google.com/store/apps/details?id=com.jsdev.newnotes&pcampaignid=web_share" class="button" target="_blank">Descargar en Google Play</a>
-                <a href="otras-apps.html" class="button" target="_blank">Ver más detalles sobre la app</a>
-            </div>
-
-	  <div class="project">
-    		<img src="https://play-lh.googleusercontent.com/heJ-rfmepYOrdmhTkSEI6Ig3T6OusFu3XoUdNggs5i0vgiXurgoQSEXmZA2SPoGM8w=w240-h480-rw" alt="Imagen de InfoDengue">
-    		<h3>InfoDengue</h3>
-    		<p>InfoDengue: Mosquitos y Dengue - es una app educativa interactiva que te enseña todo lo que necesitas saber sobre el dengue. A través de juegos y secciones informativas, aprenderás sobre la prevención, los síntomas y la transmisión del dengue, así como los peligros de las infecciones por el virus.</p>
-    		<a href="https://play.google.com/store/apps/details?id=com.jsdev.infodengue&pcampaignid=web_share" class="button" target="_blank">Descargar en Google Play</a>
-    		<a href="otras-apps2.html" class="button" target="_blank">Ver más detalles sobre la app</a>
-	    </div>
-
+        <div class="project">
+            <img src="https://play-lh.googleusercontent.com/heJ-rfmepYOrdmhTkSEI6Ig3T6OusFu3XoUdNggs5i0vgiXurgoQSEXmZA2SPoGM8w=w240-h480-rw" alt="Imagen de InfoDengue" />
+            <h3>InfoDengue</h3>
+            <p>InfoDengue: Mosquitos y Dengue - es una app educativa interactiva que te enseña todo lo que necesitas saber sobre el dengue. A través de juegos y secciones informativas, aprenderás sobre la prevención, los síntomas y la transmisión del dengue, así como los peligros de las infecciones por el virus.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.jsdev.infodengue&pcampaignid=web_share" class="button" target="_blank" rel="noopener">Descargar en Google Play</a>
+            <a href="otras-apps2.html" class="button" target="_blank" rel="noopener">Ver más detalles sobre la app</a>
         </div>
     </section>
 
     <!-- Equipo -->
-    <section class="team" id="team">
+    <section class="team" id="about2">
         <div class="container">
             <h2>Conoce al Equipo</h2>
             <div class="team-members">
                 <div class="member">
-                    <img src="https://github.com/teamjsdev/teamjsdev.github.io/blob/main/imagen1.png?raw=true" alt="Miembro del equipo">
+                    <img src="https://github.com/teamjsdev/teamjsdev.github.io/blob/main/imagen1.png?raw=true" alt="Miembro del equipo" />
                     <h3>Joaquin Sanchez</h3>
-                    <p>Desarrollador Android y fundador de JSDev. Apasionado por el desarrollo de aplicaciones móviles centradas en el usuario.</p>
+                    <p>Farmacéutico y desarrollador Android. Fundador de JSDev, dedicado a crear aplicaciones móviles centradas en la experiencia y utilidad real para los usuarios.</p>
                 </div>
             </div>
         </div>
@@ -204,9 +205,31 @@
       "name": "JSDev",
       "url": "https://teamjsdev.github.io",
       "logo": "https://teamjsdev.github.io/logo.png",
-      "description": "JSDev es un equipo de desarrollo de aplicaciones móviles Android enfocado en productividad y diseño intuitivo."
-      ]
+      "description": "Farmacéutico y desarrollador Android. Fundador de JSDev, dedicado a crear aplicaciones móviles centradas en la experiencia y utilidad real para los usuarios."
     }
     </script>
+
+    <script>
+      // Mostrar/ocultar texto extra al hacer clic en "Sobre Nosotros"
+      document.getElementById('about-link').addEventListener('click', function(e){
+        e.preventDefault();
+        const extra = document.getElementById('extra-about');
+        if(extra.style.display === 'none') {
+          extra.style.display = 'block';
+          extra.scrollIntoView({behavior: 'smooth'});
+        } else {
+          extra.style.display = 'none';
+        }
+      });
+
+      // Ocultar texto extra y subir al inicio cuando se hace clic en "Inicio"
+      document.getElementById('inicio-link').addEventListener('click', function(e){
+        e.preventDefault();
+        const extra = document.getElementById('extra-about');
+        extra.style.display = 'none';
+        window.scrollTo({top: 0, behavior: 'smooth'});
+      });
+    </script>
+
 </body>
 </html>
