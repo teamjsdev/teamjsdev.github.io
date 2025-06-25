@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JSDev - Desarrollo de Aplicaciones Android</title>
+  <meta name="description" content="JSDev es un proyecto personal que une la farmacia y la tecnología. Desarrollo de apps Android centradas en salud, bienestar y productividad." />
+  <meta name="author" content="Joaquin Sanchez" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome: íconos sociales -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #B7EAD3, #A0D6B4);
+      color: #1f2937;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+    nav {
+      background-color: white;
+      padding: 10px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+    nav a {
+      color: #3b82f6;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+    }
+    section.container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    .intro h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .intro p {
+      text-align: center;
+      max-width: 800px;
+      margin: 10px auto;
+    }
+    .projects, .ideas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .card img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      margin-bottom: 15px;
+      border-radius: 20px;
+    }
+    .card h3 {
+      font-size: 1.3em;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 0.95em;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: #3b82f6;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .button:hover {
+      background-color: #2563eb;
+    }
+    footer {
+      background-color: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+    }
+    .team {
+      text-align: center;
+      margin-top: 60px;
+    }
+    .team img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #e5e7eb; /* fondo gris clarito
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #e5e7eb;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JSDev - Desarrollo de Aplicaciones Android</h1>
+  </header>
+
+  <nav>
+    <a href="#sobre">Sobre mí</a>
+    <a href="#ideas">Apps Publicadas</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section class="container intro" id="sobre">
+    <h2>Sobre JSDev</h2>
+    <p>JSDev es un proyecto personal dedicado al desarrollo de aplicaciones Android con foco en la usabilidad, el diseño simple y la utilidad real. Cada aplicación busca aportar algo útil y positivo a la vida de quienes la usan. Desarrollo aplicaciones centradas en salud, bienestar, productividad y educación.</p>
+  </section>
+
+  <section class="container" id="ideas">
+  <h2>Apps Publicadas</h2>
+
+  <div class="card">
+            <img src="https://play-lh.googleusercontent.com/XNqH4ZgkUvytJMXkWwJudfG6dM-OfwsIPq6hN7wrg5Y_QOj2LO4v5vf63VWQlD2scMk=w240-h480-rw" alt="Aplicación NoteMover" />
+            <h3>NoteMover</h3>
+            <p>NoteMover es una aplicación de notas y organizador diseñada para ayudarte a mantener tus ideas en orden. Personaliza tus notas con colores, organiza tareas y más.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.jsdev.newnotes&pcampaignid=web_share" class="button" target="_blank" rel="noopener">Descargar en Google Play</a>
+            <a href="otras-apps.html" class="button" target="_blank" rel="noopener">Ver más detalles sobre la app</a>
+        </div>
+  </section>
+
+
+  <section class="container team">
+    <h2>Quién soy</h2>
+    <img src="https://github.com/teamjsdev/teamjsdev.github.io/blob/main/imagen1.png?raw=true" alt="Joaquín Sánchez">
+    <p>Joaquin Sanchez, Farmacéutico y programador. Me apasiona combinar conocimiento técnico y sensibilidad humana para crear herramientas con impacto real.</p>
+  </section>
+
+
+  <footer id="contacto">
+  <p>&copy; 2025 JSDev - Todos los derechos reservados.</p>
+  <p>
+    Contacto:
+    <a href="mailto:teamjsdev@gmail.com" style="color: #38bdf8; text-decoration: none;">teamjsdev@gmail.com</a>
+  </p>
+  <p>
+    <!-- X como texto simple -->
+    <a href="https://x.com/DevTeamjsdev" target="_blank" rel="noopener" style="margin-right: 15px; color: #000; font-weight: 700; font-size: 1.5rem; text-decoration: none;">
+      X
+    </a>
+
+    <!-- Instagram con icono FontAwesome -->
+    <a href="https://instagram.com/teamjsdev" target="_blank" rel="noopener"
+    style="margin-right: 15px; color: #E4405F; font-size: 1.5rem; text-decoration: none;">
+    <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- LinkedIn con icono FontAwesome -->
+    <a href="https://linkedin.com/in/joaquin-sanchez-a2944514b" target="_blank" rel="noopener" style="color: #0A66C2; font-size: 1.5rem;">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </p>
+  </footer>
+
+</body>
+</html>
