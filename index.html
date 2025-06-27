@@ -24,16 +24,38 @@
       color: #1f2937;
       line-height: 1.6;
     }
+    
     header {
       background: linear-gradient(135deg, #B7EAD3, #A0D6B4);
       color: #1f2937;
-      padding: 20px 20px;
-      text-align: center;
+      padding: 20px;
     }
 
-    header h1 {
-      font-size: 2.5em;
+    .header-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
     }
+
+    .header-title h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    .header-logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
     nav {
       background-color: white;
       padding: 10px 0;
@@ -68,12 +90,18 @@
       margin-top: 40px;
     }
     .card {
+      transition: transform 0.3s ease;
       background: white;
       border-radius: 12px;
       padding: 20px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       text-align: center;
     }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
     .card img {
       width: 120px;
       height: 120px;
@@ -118,7 +146,7 @@
       height: 120px;
       object-fit: cover;
       border-radius: 50%;
-      border: 3px solid #e5e7eb; /* fondo gris clarito
+      border: 3px solid #e5e7eb; /* fondo gris clarito */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       background-color: #e5e7eb;
       margin-bottom: 10px;
@@ -127,7 +155,10 @@
 </head>
 <body>
   <header>
-    <h1>JSDev - Desarrollo de Aplicaciones Android</h1>
+  <div class="header-title">
+    <img src="web2.png" alt="Logo JSDev" class="header-logo">
+    <h1>Desarrollo de Aplicaciones Android</h1>
+  </div>
   </header>
 
   <nav>
@@ -146,18 +177,21 @@
   <div class="ideas">
     <a href="salud.html" style="text-decoration: none; color: inherit;">
       <div class="card">
+        <img src="salud.png" alt="Salud y bienestar" />
         <h3>Apps de salud y bienestar</h3>
         <p>Herramientas móviles para gestión de síntomas, cuidado, prevención y soporte en salud.</p>
       </div>
     </a>
     <a href="productividad.html" style="text-decoration: none; color: inherit;">
       <div class="card">
+        <img src="productividad.png" alt="Productividad" />
         <h3>Productividad</h3>
         <p>Aplicaciones pensadas para ayudarte a enfocarte, organizar tus ideas y trabajar mejor.</p>
       </div>
     </a>
   </div>
-  </section>
+</section>
+
 
       <!--
 	<div class="card">
