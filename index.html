@@ -7,28 +7,25 @@
   <meta name="description" content="JSDev es un proyecto personal que une la farmacia y la tecnología. Desarrollo de apps Android centradas en salud, bienestar y productividad." />
   <meta name="author" content="Joaquin Sanchez" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- FontAwesome: íconos sociales -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: 'Inter', sans-serif;
       background-color: #f9fafb;
       color: #1f2937;
       line-height: 1.6;
     }
-    
+
     header {
       background: linear-gradient(135deg, #B7EAD3, #A0D6B4);
       color: #1f2937;
-      padding: 20px;
+      padding: 10px 16px;
     }
 
     .header-title {
@@ -50,45 +47,45 @@
       object-fit: contain;
     }
 
-    .logo-icon {
-      width: 40px;
-      height: 40px;
-      object-fit: contain;
-    }
-
     nav {
       background-color: white;
       padding: 10px 0;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
       text-align: center;
     }
+
     nav a {
       color: #3b82f6;
       text-decoration: none;
       margin: 0 15px;
       font-weight: 600;
     }
+
     section.container {
       max-width: 1100px;
       margin: auto;
       padding: 40px 20px;
     }
+
     .intro h2 {
       font-size: 2em;
       margin-bottom: 15px;
       text-align: center;
     }
+
     .intro p {
       text-align: center;
       max-width: 800px;
       margin: 10px auto;
     }
+
     .projects, .ideas {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
       margin-top: 40px;
     }
+
     .card {
       transition: transform 0.3s ease;
       background: white;
@@ -109,13 +106,16 @@
       margin-bottom: 15px;
       border-radius: 20px;
     }
+
     .card h3 {
       font-size: 1.3em;
       margin-bottom: 10px;
     }
+
     .card p {
       font-size: 0.95em;
     }
+
     .button {
       display: inline-block;
       margin-top: 15px;
@@ -127,9 +127,11 @@
       font-weight: 600;
       transition: background 0.3s ease;
     }
+
     .button:hover {
       background-color: #2563eb;
     }
+
     footer {
       background-color: #1f2937;
       color: white;
@@ -137,28 +139,46 @@
       padding: 20px 10px;
       margin-top: 40px;
     }
+
     .team {
       text-align: center;
       margin-top: 60px;
     }
+
     .team img {
       width: 120px;
       height: 120px;
       object-fit: cover;
       border-radius: 50%;
-      border: 3px solid #e5e7eb; /* fondo gris clarito */
+      border: 3px solid #e5e7eb;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       background-color: #e5e7eb;
       margin-bottom: 10px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 8px 12px;
+      }
+
+      .header-title h1 {
+        font-size: 1.5em;
+        text-align: center;
+      }
+
+      .header-logo {
+        width: 60px;
+        height: 60px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-  <div class="header-title">
-    <img src="web2.png" alt="Logo JSDev" class="header-logo">
-    <h1>Desarrollo de Aplicaciones Android</h1>
-  </div>
+    <div class="header-title">
+      <img src="web2.png" alt="Logo JSDev" class="header-logo">
+      <h1>Desarrollo de Aplicaciones Android</h1>
+    </div>
   </header>
 
   <nav>
@@ -173,41 +193,24 @@
   </section>
 
   <section class="container" id="ideas">
-  <h2>Apps Publicadas</h2>
-  <div class="ideas">
-    <a href="salud.html" style="text-decoration: none; color: inherit;">
-      <div class="card">
-        <img src="salud.png" alt="Salud y bienestar" />
-        <h3>Apps de salud y bienestar</h3>
-        <p>Herramientas móviles para gestión de síntomas, cuidado, prevención y soporte en salud.</p>
-      </div>
-    </a>
-    <a href="productividad.html" style="text-decoration: none; color: inherit;">
-      <div class="card">
-        <img src="productividad.png" alt="Productividad" />
-        <h3>Productividad</h3>
-        <p>Aplicaciones pensadas para ayudarte a enfocarte, organizar tus ideas y trabajar mejor.</p>
-      </div>
-    </a>
-  </div>
-</section>
-
-
-      <!--
-	<div class="card">
-        <h3>Hogar y vida diaria</h3>
-        <p>Apps para recetas random, heladera.</p>
-      </div>
-      <div class="card">
-        <h3>Apps educativas</h3>
-        <p>Generador visual para mnemotecnia, apps para estudiantes y recordatorios de descanso ocular.</p>
-      </div>
-	<div class="card">
-        <h3>Apps Sociales</h3>
-        <p>Amistad, citas online.</p>
-      </div>
-      -->
-
+    <h2>Apps Publicadas</h2>
+    <div class="ideas">
+      <a href="salud.html" style="text-decoration: none; color: inherit;">
+        <div class="card">
+          <img src="salud.png" alt="Salud y bienestar" />
+          <h3>Apps de salud y bienestar</h3>
+          <p>Herramientas móviles para gestión de síntomas, cuidado, prevención y soporte en salud.</p>
+        </div>
+      </a>
+      <a href="productividad.html" style="text-decoration: none; color: inherit;">
+        <div class="card">
+          <img src="productividad.png" alt="Productividad" />
+          <h3>Productividad</h3>
+          <p>Aplicaciones pensadas para ayudarte a enfocarte, organizar tus ideas y trabajar mejor.</p>
+        </div>
+      </a>
+    </div>
+  </section>
 
   <section class="container team">
     <h2>Quién soy</h2>
@@ -215,31 +218,17 @@
     <p>Joaquin Sanchez, Farmacéutico y programador. Me apasiona combinar conocimiento técnico y sensibilidad humana para crear herramientas con impacto real.</p>
   </section>
 
-
   <footer id="contacto">
-  <p>&copy; 2025 JSDev - Todos los derechos reservados.</p>
-  <p>
-    Contacto:
-    <a href="mailto:teamjsdev@gmail.com" style="color: #38bdf8; text-decoration: none;">teamjsdev@gmail.com</a>
-  </p>
-  <p>
-    <!-- X como texto simple -->
-    <a href="https://x.com/DevTeamjsdev" target="_blank" rel="noopener" style="margin-right: 15px; color: #000; font-weight: 700; font-size: 1.5rem; text-decoration: none;">
-      X
-    </a>
-
-    <!-- Instagram con icono FontAwesome -->
-    <a href="https://instagram.com/teamjsdev" target="_blank" rel="noopener"
-    style="margin-right: 15px; color: #E4405F; font-size: 1.5rem; text-decoration: none;">
-    <i class="fab fa-instagram"></i>
-    </a>
-
-    <!-- LinkedIn con icono FontAwesome -->
-    <a href="https://linkedin.com/in/joaquin-sanchez-a2944514b" target="_blank" rel="noopener" style="color: #0A66C2; font-size: 1.5rem;">
-      <i class="fab fa-linkedin"></i>
-    </a>
-  </p>
+    <p>&copy; 2025 JSDev - Todos los derechos reservados.</p>
+    <p>
+      Contacto:
+      <a href="mailto:teamjsdev@gmail.com" style="color: #38bdf8; text-decoration: none;">teamjsdev@gmail.com</a>
+    </p>
+    <p>
+      <a href="https://x.com/DevTeamjsdev" target="_blank" rel="noopener" style="margin-right: 15px; color: #000; font-weight: 700; font-size: 1.5rem; text-decoration: none;">X</a>
+      <a href="https://instagram.com/teamjsdev" target="_blank" rel="noopener" style="margin-right: 15px; color: #E4405F; font-size: 1.5rem; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/in/joaquin-sanchez-a2944514b" target="_blank" rel="noopener" style="color: #0A66C2; font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+    </p>
   </footer>
-
 </body>
 </html>
