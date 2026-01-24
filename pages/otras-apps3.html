@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toilet Timer | Temporizador de Baño y Hábitos Saludables</title>
+
+  <meta name="description" content="Toilet Timer es una app para Android diseñada para ayudarte a no pasar demasiado tiempo en el baño. Incluye un temporizador de 5 minutos, seguimiento de hábitos, puntos diarios, gráficos semanales y consejos educativos.">
+  <meta name="keywords" content="Toilet Timer, temporizador baño, salud intestinal, hábitos saludables, app baño, temporizador 5 minutos, Android, JSDev, aplicación gratuita">
+  <meta name="author" content="JSDev">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://play.google.com/store/apps/details?id=com.jsdev.hemorrhoidinfo">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Toilet Timer - Rutina rápida y saludable en el baño">
+  <meta property="og:description" content="Controla tu tiempo en el baño, sigue hábitos saludables y mejora tu rutina diaria con gráficos y consejos educativos.">
+  <meta property="og:image" content="https://play-lh.googleusercontent.com/Ss_pk1aXWFrQ2A_x3jE6OfW-5yXgGtLtl-mnBLmlOEWrqc0Q45jr8ED0vih8tptJJdMS21qKC4WOS8X5AlA7Qg=w480-h800-rw">
+  <meta property="og:url" content="https://play.google.com/store/apps/details?id=com.jsdev.hemorrhoidinfo">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Toilet Timer - Temporizador de baño y hábitos saludables">
+  <meta name="twitter:description" content="Temporizador de 5 minutos, seguimiento de hábitos, puntos, gráficos semanales y consejos para un estilo de vida saludable.">
+  <meta name="twitter:image" content="https://play-lh.googleusercontent.com/Ss_pk1aXWFrQ2A_x3jE6OfW-5yXgGtLtl-mnBLmlOEWrqc0Q45jr8ED0vih8tptJJdMS21qKC4WOS8X5AlA7Qg=w480-h800-rw">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .app-image {
+      max-width: 25%;
+      height: auto;
+      margin: 20px 0;
+      border-radius: 24px;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007bff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+    .description {
+      text-align: left;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 18px;
+    }
+  </style>
+</head>
+<body>
+  <main class="container" aria-label="Página principal de Toilet Timer">
+    <h1>Toilet Timer - Mantén tu rutina rápida y saludable</h1>
+
+    <!-- Imagen de la aplicación -->
+    <img src="https://play-lh.googleusercontent.com/Ss_pk1aXWFrQ2A_x3jE6OfW-5yXgGtLtl-mnBLmlOEWrqc0Q45jr8ED0vih8tptJJdMS21qKC4WOS8X5AlA7Qg=w480-h800-rw" 
+         alt="Icono de la aplicación Toilet Timer" 
+         class="app-image" loading="lazy">
+
+    <!-- Descripción detallada -->
+    <section class="description" aria-label="Descripción de la aplicación Toilet Timer">
+      <h2>¿Qué es Toilet Timer?</h2>
+      <p><strong>Toilet Timer</strong> es una herramienta simple y práctica diseñada para ayudarte a no pasar demasiado tiempo en el baño. Con un temporizador de 5 minutos y consejos útiles, podrás mantener una rutina más eficiente y saludable.</p>
+
+      <h3>Funciones principales</h3>
+      <ul>
+        <li><strong>Temporizador de 5 minutos</strong> con alertas para mantener tu tiempo bajo control.</li>
+        <li><strong>Registro de hábitos saludables</strong> como beber agua, moverte o consumir fibra.</li>
+        <li><strong>Puntos diarios</strong> por completar tus hábitos y mantener consistencia.</li>
+        <li><strong>Gráficos semanales</strong> para visualizar tu progreso.</li>
+        <li><strong>Consejos educativos</strong> para mejorar tus rutinas y bienestar diario.</li>
+      </ul>
+
+      <p>Perfecta para quienes buscan mejorar su salud intestinal, organizar su rutina y evitar pasar demasiado tiempo sentados. Sencilla, educativa y útil para el día a día.</p>
+    </section>
+
+    <!-- Botón de descarga -->
+    <a href="https://play.google.com/store/apps/details?id=com.jsdev.hemorrhoidinfo&pcampaignid=web_share" 
+       class="button" 
+       target="_blank" 
+       rel="noopener noreferrer">Descargar Toilet Timer Gratis</a>
+  </main>
+
+  <!-- Rich Snippet para SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Toilet Timer",
+      "operatingSystem": "ANDROID",
+      "applicationCategory": "HealthApplication",
+      "url": "https://play.google.com/store/apps/details?id=com.jsdev.hemorrhoidinfo",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "120"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "JSDev"
+      }
+    }
+  </script>
+</body>
+</html>
