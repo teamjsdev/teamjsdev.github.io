@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JSDev - Diseño Web</title>
+  <meta name="description" content="Sitios web desarrollados por JSDev. Diseño moderno, rendimiento y experiencia de usuario." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #B7EAD3, #A0D6B4);
+      color: #1f2937;
+      padding: 10px 16px;
+    }
+
+    .header-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-logo {
+      width: clamp(50px, 12vw, 80px);
+      height: clamp(50px, 12vw, 80px);
+      object-fit: contain;
+    }
+
+    nav {
+      background-color: white;
+      padding: 10px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    nav a {
+      color: #3b82f6;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+    }
+
+    section.container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      max-width: 260px;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 1.3em;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95em;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 15px;
+      background-color: #3b82f6;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #2563eb;
+    }
+
+    footer {
+      background-color: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-title">
+      <img src="../assets/img/web2.png" alt="Logo JSDev" class="header-logo">
+      <div>
+        <h1>JSDev</h1>
+        <p>Diseño Web</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="../index.html">Inicio</a>
+    <a href="../index.html#ideas">Apps Android</a>
+    <a href="videos.html">Edición de Videos</a>
+    <a href="web.html">Diseño Web</a>
+    <a href="../index.html#contacto">Contacto</a>
+  </nav>
+
+  <section class="container">
+    <h2>Proyectos Web</h2>
+
+    <div class="projects">
+
+      <div class="card">
+        <img src="../assets/img/web-project-1.png" alt="Sitio Web 1">
+        <h3>Sitio Web 1</h3>
+        <p>
+          Sitio web desarrollado con enfoque en diseño limpio, navegación clara
+          y buena experiencia de usuario.
+        </p>
+        <a href="#" class="button" target="_blank">Ver sitio</a>
+      </div>
+
+      <div class="card">
+        <img src="../assets/img/web-project-2.png" alt="Sitio Web 2">
+        <h3>Sitio Web 2</h3>
+        <p>
+          Proyecto web optimizado para rendimiento, accesibilidad
+          y adaptación a dispositivos móviles.
+        </p>
+        <a href="#" class="button" target="_blank">Ver sitio</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 JSDev - Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
