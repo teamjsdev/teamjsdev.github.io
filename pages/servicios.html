@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <title>JSDev | Servicios Digitales</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Servicios digitales de JSDev: desarrollo de apps Android, diseño web y producción multimedia. Soluciones funcionales y profesionales.">
+  <meta name="author" content="Joaquin Sanchez">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FVHCZT452"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8FVHCZT452');
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* TOP BAR */
+    .topbar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      z-index: 300;
+    }
+
+    .menu-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    .logo {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+    }
+
+    .brand-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .brand p {
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+
+    /* SIDE MENU */
+    .side-menu {
+      display: none;
+      position: absolute;
+      top: 52px;
+      left: 0;
+      background: white;
+      width: 220px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      z-index: 300;
+    }
+
+    .side-menu a {
+      display: block;
+      padding: 14px 18px;
+      text-decoration: none;
+      color: #1e3c72;
+      font-weight: 500;
+    }
+
+    .side-menu a:hover {
+      background: #f0f4ff;
+    }
+
+    /* MAIN NAV */
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 400;
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    }
+
+    .main-nav a,
+    .dropdown span {
+      text-decoration: none;
+      color: #2a5298;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* DROPDOWN */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background: white;
+      min-width: 180px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      z-index: 300;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 12px 16px;
+      color: #1e3c72;
+    }
+
+    .dropdown-content a:hover {
+      background: #f0f4ff;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 1.05rem;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      color: #1e3c72;
+      margin-bottom: 25px;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .ideas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #1e3c72;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .card ul {
+      text-align: left;
+      margin-top: 10px;
+      padding-left: 18px;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background-color: #1e3c72;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menú">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <img src="assets/img/web2.png" alt="Logo JSDev" class="logo">
+
+  <div class="brand">
+    <span class="brand-title">JSDev</span>
+    <p>Servicios digitales</p>
+  </div>
+</header>
+
+<!-- SIDE MENU -->
+<div id="sideMenu" class="side-menu">
+  <a href="index.html#apps">Apps Android</a>
+  <a href="pages/videos.html">Edición de Videos</a>
+  <a href="pages/web.html">Diseño Web</a>
+</div>
+
+<!-- MAIN NAV -->
+<nav class="main-nav">
+  <a href="index.html">Inicio</a>
+  <a href="index.html#sobre">Sobre mí</a>
+
+  <div class="dropdown">
+    <span>Proyectos ▾</span>
+    <div class="dropdown-content">
+      <a href="index.html#apps">Apps Android</a>
+      <a href="pages/videos.html">Edición de Videos</a>
+      <a href="pages/web.html">Diseño Web</a>
+    </div>
+  </div>
+
+  <a href="servicios.html">Servicios</a>
+  <a href="index.html#contacto">Contacto</a>
+</nav>
+
+<!-- HERO -->
+<section>
+  <h1>Servicios digitales</h1>
+  <p>
+    Desarrollo soluciones digitales enfocadas en funcionalidad real, diseño claro
+     y buena experiencia de usuario. Trabajo proyectos de forma
+     personalizada, priorizando calidad y resultados.
+  </p>
+</section>
+
+<!-- SERVICIOS -->
+<section>
+  <h2>Qué puedo ofrecer</h2>
+
+  <div class="ideas">
+
+    <div class="card">
+      <h3>📱 Desarrollo de Apps Android</h3>
+      <p>Aplicaciones nativas orientadas a estabilidad y uso real.</p>
+      <ul>
+        <li>Apps de salud y bienestar</li>
+        <li>Herramientas de productividad</li>
+        <li>Interfaces simples y claras</li>
+        <li>Mantenimiento y mejoras</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>🌐 Diseño y Desarrollo Web</h3>
+      <p>Sitios web rápidos, modernos y adaptables.</p>
+      <ul>
+        <li>Webs estáticas profesionales</li>
+        <li>Diseño responsive</li>
+        <li>Optimización SEO básica</li>
+        <li>Buena experiencia de usuario</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>🎬 Producción y Edición de Video</h3>
+      <p>Contenido audiovisual claro y adaptable.</p>
+      <ul>
+        <li>Videos cortos para redes</li>
+        <li>Spots para eventos</li>
+        <li>Formatos vertical y horizontal</li>
+        <li>Optimización para plataformas</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 JSDev - Servicios Digitales</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("sideMenu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>
