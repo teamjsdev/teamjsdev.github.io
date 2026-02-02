@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html lang="es-AR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>JSDev – Desarrollo de Apps Android | Productividad y Salud</title>
+  <meta charset="UTF-8">
+  <title>JSDev | Apps Android de Productividad y Salud</title>
 
   <!-- SEO -->
-  <meta name="description" content="JSDev es un proyecto personal que une la farmacia y la tecnología. Desarrollo de aplicaciones Android enfocadas en productividad, salud y bienestar." />
-  <meta name="author" content="Joaquin Sanchez" />
+  <meta name="description" content="JSDev desarrolla aplicaciones Android enfocadas en productividad, salud y soluciones digitales de uso real.">
+  <meta name="author" content="Joaquin Sanchez">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fuente -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <!-- FontAwesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FVHCZT452"></script>
@@ -30,68 +23,177 @@
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
     }
+
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f9fafb;
-      color: #1f2937;
+      background-color: #f4f6f8;
+      color: #333;
       line-height: 1.6;
     }
-    header {
-      background: linear-gradient(135deg, #B7EAD3, #A0D6B4);
-      padding: 20px;
-    }
-    .header-title {
+
+    /* TOP BAR */
+    .topbar {
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 12px;
-      flex-wrap: wrap;
-      text-align: center;
+      padding: 10px 14px;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      z-index: 300;
     }
-    .header-logo {
-      width: clamp(50px, 12vw, 80px);
-      height: clamp(50px, 12vw, 80px);
+
+    .menu-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    .logo {
+      width: 42px;
+      height: 42px;
       object-fit: contain;
     }
-    h1 {
-      font-size: clamp(1.5rem, 4.5vw, 2.5rem);
-      line-height: 1.3;
+
+    .brand-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.1;
     }
-    nav {
-      background-color: white;
-      padding: 10px 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-      text-align: center;
+
+    .brand p {
+      font-size: 0.85rem;
+      opacity: 0.9;
     }
-    nav a {
-      color: #3b82f6;
+
+    /* SIDE MENU */
+    .side-menu {
+      display: none;
+      position: absolute;
+      top: 52px;
+      left: 0;
+      background: white;
+      width: 230px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      z-index: 300;
+    }
+
+    .side-menu a {
+      display: block;
+      padding: 14px 18px;
       text-decoration: none;
-      margin: 0 15px;
+      color: #1e3c72;
+      font-weight: 500;
+    }
+
+    .side-menu a:hover {
+      background: #f0f4ff;
+    }
+
+    /* MAIN NAV */
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 400;
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    }
+
+    .main-nav a,
+    .dropdown span {
+      text-decoration: none;
+      color: #2a5298;
       font-weight: 600;
+      cursor: pointer;
     }
-    section.container {
-      max-width: 1100px;
-      margin: auto;
+
+    /* DROPDOWN */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background: white;
+      min-width: 180px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      z-index: 300;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 12px 16px;
+      color: #1e3c72;
+    }
+
+    .dropdown-content a:hover {
+      background: #f0f4ff;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
       padding: 40px 20px;
-    }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
       text-align: center;
     }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 1.05rem;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      color: #1e3c72;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      text-align: center;
+    }
+
     .card {
       background: white;
       border-radius: 12px;
-      padding: 20px;
+      padding: 22px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       text-align: center;
       max-width: 420px;
       margin: auto;
+      transition: transform 0.3s ease;
     }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
     .card img {
       width: 120px;
       height: 120px;
@@ -99,132 +201,148 @@
       margin-bottom: 15px;
       border-radius: 20px;
     }
+
     .card h3 {
-      font-size: 1.3em;
+      color: #1e3c72;
       margin-bottom: 10px;
+      font-size: 1.3rem;
     }
-    .card p {
-      font-size: 0.95em;
-    }
+
     .button {
       display: inline-block;
-      margin-top: 15px;
-      padding: 10px 15px;
-      background-color: #3b82f6;
+      margin-top: 12px;
+      padding: 10px 16px;
+      background-color: #2a5298;
       color: white;
       border-radius: 8px;
       text-decoration: none;
       font-weight: 600;
-      transition: background 0.3s ease;
     }
+
     .button:hover {
-      background-color: #2563eb;
+      background-color: #1e3c72;
     }
+
     .team {
       text-align: center;
-      margin-top: 60px;
     }
+
     .team img {
       width: 120px;
       height: 120px;
-      object-fit: cover;
       border-radius: 50%;
-      border: 3px solid #e5e7eb;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      background-color: #e5e7eb;
       margin-bottom: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     }
+
     footer {
-      background-color: #1f2937;
+      background-color: #1e3c72;
       color: white;
       text-align: center;
-      padding: 20px 10px;
-      margin-top: 40px;
+      padding: 25px 15px;
+      margin-top: 60px;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="header-title">
-    <img src="../assets/img/web2.png" alt="Logo JSDev" class="header-logo" />
-    <h1>Desarrollo de Aplicaciones Android</h1>
+<!-- TOP BAR -->
+<header class="topbar">
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menú">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <img src="../assets/img/web2.png" alt="Logo JSDev" class="logo">
+
+  <div class="brand">
+    <span class="brand-title">JSDev</span>
+    <p>Apps Android</p>
   </div>
 </header>
 
-<nav>
+<!-- SIDE MENU -->
+<div id="sideMenu" class="side-menu">
+  <a href="../index.html#apps">Apps Android</a>
+  <a href="videos.html">Edición de Videos</a>
+  <a href="web.html">Diseño Web</a>
+</div>
+
+<!-- MAIN NAV -->
+<nav class="main-nav">
+  <a href="../index.html">Inicio</a>
   <a href="../index.html#sobre">Sobre mí</a>
-  <a href="#ideas">Apps publicadas</a>
+
+  <div class="dropdown">
+    <span>Proyectos ▾</span>
+    <div class="dropdown-content">
+      <a href="../index.html#apps">Apps Android</a>
+      <a href="videos.html">Edición de Videos</a>
+      <a href="web.html">Diseño Web</a>
+    </div>
+  </div>
+
+  <a href="../servicios.html">Servicios</a>
   <a href="#contacto">Contacto</a>
 </nav>
 
-<section class="container" id="ideas">
-  <h2>Apps para mejorar tu productividad</h2>
+<!-- HERO -->
+<section class="hero">
+  <h1>Apps Android de productividad</h1>
+  <p>
+    Desarrollo aplicaciones Android pensadas para organización,
+    eficiencia personal y soluciones digitales simples y efectivas.
+  </p>
+</section>
+
+<!-- APP -->
+<section>
+  <h2>App destacada</h2>
 
   <article class="card">
-    <img
-      src="https://play-lh.googleusercontent.com/XNqH4ZgkUvytJMXkWwJudfG6dM-OfwsIPq6hN7wrg5Y_QOj2LO4v5vf63VWQlD2scMk=w240-h480-rw"
-      alt="Aplicación Android NoteMover"
-    />
+    <img src="https://play-lh.googleusercontent.com/XNqH4ZgkUvytJMXkWwJudfG6dM-OfwsIPq6hN7wrg5Y_QOj2LO4v5vf63VWQlD2scMk=w240-h480-rw" alt="NoteMover">
     <h3>NoteMover</h3>
     <p>
-      NoteMover es una aplicación de notas y organización de tareas diseñada para
-      ayudarte a mantener tus ideas en orden, con colores, movimiento manual y simplicidad.
+      Aplicación de notas y organización de tareas con enfoque en simplicidad,
+      colores y control manual del orden.
     </p>
-    <a
-      href="https://play.google.com/store/apps/details?id=com.jsdev.newnotes"
-      class="button"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Descargar en Google Play
-    </a>
-    <br />
-    <a
-      href="otras-apps.html"
-      class="button"
-      rel="noopener"
-    >
-      Ver más detalles
+
+    <a href="https://play.google.com/store/apps/details?id=com.jsdev.newnotes" target="_blank" class="button">
+      Google Play
+    </a><br>
+
+    <a href="otras-apps.html" class="button">
+      Más detalles
     </a>
   </article>
 </section>
 
-<section class="container team" id="sobre">
+<!-- SOBRE -->
+<section class="team" id="sobre">
   <h2>Quién soy</h2>
-  <img
-    src="https://github.com/teamjsdev/teamjsdev.github.io/blob/main/assets/img/imagen1.png?raw=true"
-    alt="Joaquín Sánchez, desarrollador Android"
-  />
+  <img src="https://github.com/teamjsdev/teamjsdev.github.io/blob/main/assets/img/imagen1.png?raw=true" alt="Joaquín Sánchez">
   <p>
-    Joaquín Sánchez, farmacéutico y programador. Me apasiona combinar conocimiento técnico
-    y sensibilidad humana para crear herramientas con impacto real.
+    Joaquín Sánchez, farmacéutico y desarrollador Android.
+    Creo herramientas digitales con foco en utilidad real,
+    productividad y experiencia de usuario.
   </p>
 </section>
 
 <footer id="contacto">
-  <p>&copy; 2025 JSDev – Todos los derechos reservados.</p>
-
+  <p>© 2026 JSDev</p>
   <p>
-    Contacto:
     <a href="mailto:teamjsdev@gmail.com" style="color:#38bdf8; text-decoration:none;">
       teamjsdev@gmail.com
     </a>
   </p>
-
-  <p>
-    <a href="https://x.com/DevTeamjsdev" target="_blank" rel="noopener noreferrer"
-       style="margin-right:15px; color:#fff; font-weight:700; font-size:1.5rem; text-decoration:none;">
-      X
-    </a>
-
-    <a href="https://instagram.com/teamjsdev" target="_blank" rel="noopener noreferrer"
-       style="color:#E4405F; font-size:1.5rem; text-decoration:none;">
-      <i class="fab fa-instagram" aria-hidden="true"></i>
-    </a>
-  </p>
 </footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("sideMenu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+</script>
 
 </body>
 </html>
