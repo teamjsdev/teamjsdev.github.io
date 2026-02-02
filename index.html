@@ -44,10 +44,9 @@
       padding: 10px 14px;
       background: linear-gradient(135deg, #1e3c72, #2a5298);
       color: white;
-      position: sticky;
-      top: 0;
       z-index: 300;
     }
+
 
     .menu-btn {
       background: none;
@@ -107,17 +106,18 @@
 
     /* MAIN NAV */
     .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 400;
       background: white;
       display: flex;
       justify-content: center;
       gap: 20px;
-      padding: 14px;
+      padding: 12px;
       flex-wrap: wrap;
       box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-      position: sticky;
-      top: 52px;
-      z-index: 200;
     }
+
 
     .main-nav a,
     .dropdown span {
@@ -290,10 +290,6 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       background-color: #e5e7eb;
       margin-bottom: 10px;
-    }
-
-    section {
-     scroll-margin-top: 80px;
     }
 
     @media (max-width: 768px) {
