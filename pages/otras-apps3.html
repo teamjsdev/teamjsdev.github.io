@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toilet Timer | Temporizador de Baño y Hábitos Saludables</title>
 
-  <meta name="description" content="Toilet Timer es una app para Android diseñada para ayudarte a no pasar demasiado tiempo en el baño. Incluye un temporizador de 5 minutos, seguimiento de hábitos, puntos diarios, gráficos semanales y consejos educativos.">
-  <meta name="keywords" content="Toilet Timer, temporizador baño, salud intestinal, hábitos saludables, app baño, temporizador 5 minutos, Android, JSDev, aplicación gratuita">
+  <title>Toilet Timer – Temporizador de Baño y Hábitos Saludables | JSDev</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Toilet Timer es una app Android con temporizador de 5 minutos para el baño, seguimiento de hábitos saludables, puntos diarios, gráficos semanales y consejos educativos.">
+  <meta name="keywords" content="Toilet Timer, temporizador baño, salud intestinal, hábitos saludables, app baño, temporizador 5 minutos, Android">
   <meta name="author" content="JSDev">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://play.google.com/store/apps/details?id=com.jsdev.hemorrhoidinfo">
@@ -21,122 +23,202 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Toilet Timer - Temporizador de baño y hábitos saludables">
-  <meta name="twitter:description" content="Temporizador de 5 minutos, seguimiento de hábitos, puntos, gráficos semanales y consejos para un estilo de vida saludable.">
+  <meta name="twitter:description" content="Temporizador de 5 minutos, seguimiento de hábitos, puntos diarios y gráficos semanales.">
   <meta name="twitter:image" content="https://play-lh.googleusercontent.com/Ss_pk1aXWFrQ2A_x3jE6OfW-5yXgGtLtl-mnBLmlOEWrqc0Q45jr8ED0vih8tptJJdMS21qKC4WOS8X5AlA7Qg=w480-h800-rw">
 
-<!-- Google Analytics -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8FVHCZT452"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-8FVHCZT452');
-</script>
-   <!-- Fin Google Analytics -->
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FVHCZT452"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8FVHCZT452');
+  </script>
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
+    * {
       margin: 0;
-      background-color: #f4f4f4;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
     }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .app-image {
-      max-width: 25%;
-      height: auto;
-      margin: 20px 0;
-      border-radius: 24px;
-    }
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      font-size: 16px;
-      color: #fff;
-      background-color: #007bff;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-    .button:hover {
-      background-color: #0056b3;
-    }
-    .description {
-      text-align: left;
-      margin-top: 20px;
+
+    body {
+      background-color: #f4f6f8;
+      color: #333;
       line-height: 1.6;
     }
+
+    /* TOPBAR */
+    .topbar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+    }
+
+    .logo {
+      width: 42px;
+      height: 42px;
+    }
+
+    .brand-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    /* MAIN NAV */
+    .main-nav {
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 400;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      color: #2a5298;
+      font-weight: 600;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    h1 {
+      color: #1e3c72;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    h2, h3 {
+      color: #1e3c72;
+      margin-top: 25px;
+    }
+
     ul {
-      padding-left: 18px;
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .app-image {
+      max-width: 260px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 22px;
+      background-color: #1e3c72;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
     }
   </style>
 </head>
+
 <body>
-  <main class="container" aria-label="Página principal de Toilet Timer">
-    <h1>Toilet Timer - Mantén tu rutina rápida y saludable</h1>
 
-    <!-- Imagen de la aplicación -->
-    <img src="https://play-lh.googleusercontent.com/Ss_pk1aXWFrQ2A_x3jE6OfW-5yXgGtLtl-mnBLmlOEWrqc0Q45jr8ED0vih8tptJJdMS21qKC4WOS8X5AlA7Qg=w480-h800-rw" 
-         alt="Icono de la aplicación Toilet Timer" 
-         class="app-image" loading="lazy">
+<header class="topbar">
+  <img src="../assets/img/web2.png" alt="Logo JSDev" class="logo">
+  <span class="brand-title">JSDev</span>
+</header>
 
-    <!-- Descripción detallada -->
-    <section class="description" aria-label="Descripción de la aplicación Toilet Timer">
-      <h2>¿Qué es Toilet Timer?</h2>
-      <p><strong>Toilet Timer</strong> es una herramienta simple y práctica diseñada para ayudarte a no pasar demasiado tiempo en el baño. Con un temporizador de 5 minutos y consejos útiles, podrás mantener una rutina más eficiente y saludable.</p>
+<nav class="main-nav">
+  <a href="../index.html">Inicio</a>
+  <a href="../index.html#apps">Proyectos</a>
+  <a href="../servicios.html">Servicios</a>
+  <a href="../index.html#contacto">Contacto</a>
+</nav>
 
-      <h3>Funciones principales</h3>
-      <ul>
-        <li><strong>Temporizador de 5 minutos</strong> con alertas para mantener tu tiempo bajo control.</li>
-        <li><strong>Registro de hábitos saludables</strong> como beber agua, moverte o consumir fibra.</li>
-        <li><strong>Puntos diarios</strong> por completar tus hábitos y mantener consistencia.</li>
-        <li><strong>Gráficos semanales</strong> para visualizar tu progreso.</li>
-        <li><strong>Consejos educativos</strong> para mejorar tus rutinas y bienestar diario.</li>
-      </ul>
+<main>
+  <article class="card">
+    <h1>Toilet Timer – Rutina rápida y saludable en el baño</h1>
 
-      <p>Perfecta para quienes buscan mejorar su salud intestinal, organizar su rutina y evitar pasar demasiado tiempo sentados. Sencilla, educativa y útil para el día a día.</p>
-    </section>
+    <img
+      src="https://play-lh.googleusercontent.com/Ss_pk1aXWFrQ2A_x3jE6OfW-5yXgGtLtl-mnBLmlOEWrqc0Q45jr8ED0vih8tptJJdMS21qKC4WOS8X5AlA7Qg=w480-h800-rw"
+      alt="Icono de la aplicación Toilet Timer para Android"
+      class="app-image"
+      loading="lazy"
+    >
 
-    <!-- Botón de descarga -->
-    <a href="https://play.google.com/store/apps/details?id=com.jsdev.hemorrhoidinfo&pcampaignid=web_share" 
-       class="button" 
-       target="_blank" 
-       rel="noopener noreferrer">Descargar Toilet Timer Gratis</a>
-  </main>
+    <h2>¿Qué es Toilet Timer?</h2>
+    <p>
+      <strong>Toilet Timer</strong> es una aplicación Android simple y práctica
+      diseñada para ayudarte a no pasar demasiado tiempo en el baño.
+      Incluye un temporizador de 5 minutos, seguimiento de hábitos y consejos
+      educativos para mejorar tu bienestar diario.
+    </p>
 
-  <!-- Rich Snippet para SEO -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MobileApplication",
-      "name": "Toilet Timer",
-      "operatingSystem": "ANDROID",
-      "applicationCategory": "HealthApplication",
-      "url": "https://play.google.com/store/apps/details?id=com.jsdev.hemorrhoidinfo",
-      "offers": {
-        "@type": "Offer",
-        "price": "0.00",
-        "priceCurrency": "USD"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "reviewCount": "120"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "JSDev"
-      }
-    }
-  </script>
+    <h3>Funciones principales</h3>
+    <ul>
+      <li>Temporizador de 5 minutos con alertas</li>
+      <li>Registro de hábitos saludables</li>
+      <li>Sistema de puntos diarios</li>
+      <li>Gráficos semanales de progreso</li>
+      <li>Consejos educativos de bienestar</li>
+    </ul>
+
+    <p>
+      Ideal para quienes buscan mejorar su salud intestinal,
+      organizar su rutina diaria y evitar pasar demasiado tiempo sentados.
+    </p>
+
+    <a
+      href="https://play.google.com/store/apps/details?id=com.jsdev.hemorrhoidinfo"
+      target="_blank"
+      rel="noopener"
+      class="button">
+      Descargar Toilet Timer Gratis
+    </a>
+  </article>
+</main>
+
+<!-- Rich Snippet -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Toilet Timer",
+  "operatingSystem": "ANDROID",
+  "applicationCategory": "HealthApplication",
+  "url": "https://play.google.com/store/apps/details?id=com.jsdev.hemorrhoidinfo",
+  "offers": {
+    "@type": "Offer",
+    "price": "0.00",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "JSDev"
+  }
+}
+</script>
+
 </body>
 </html>
