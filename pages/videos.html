@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="es-AR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>JSDev – Portafolio Multimedia y Producción Audiovisual</title>
+  <meta charset="UTF-8">
+  <title>JSDev | Producción Multimedia y Edición de Video</title>
 
   <!-- SEO -->
-  <meta name="description" content="Portafolio multimedia de JSDev: producción de videos cortos para redes sociales, spots para eventos y desarrollo web." />
-  <meta name="author" content="Joaquin Sanchez" />
+  <meta name="description" content="Producción multimedia y edición de video por JSDev. Videos cortos para redes sociales, spots para eventos y contenido audiovisual profesional.">
+  <meta name="author" content="Joaquin Sanchez">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fuente -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <!-- FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FVHCZT452"></script>
@@ -26,150 +22,296 @@
   </script>
 
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f9fafb;
-      color: #1f2937;
-      line-height: 1.6;
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
     }
-    header {
-      background: linear-gradient(135deg, #B7EAD3, #A0D6B4);
-      padding: 10px 16px;
+
+    body {
+      background-color: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
     }
-    .header-title {
+
+    /* TOP BAR */
+    .topbar {
       display: flex;
       align-items: center;
       gap: 12px;
-      flex-wrap: wrap;
+      padding: 10px 14px;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      z-index: 300;
     }
-    .header-logo {
-      width: clamp(50px, 12vw, 80px);
-      height: clamp(50px, 12vw, 80px);
+
+    .menu-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    .logo {
+      width: 42px;
+      height: 42px;
       object-fit: contain;
     }
-    h1 {
-      font-size: clamp(1.5rem, 4.5vw, 2.2rem);
+
+    .brand-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .brand p {
+      font-size: 0.85rem;
       margin: 0;
+      opacity: 0.9;
     }
-    .header-subtitle {
-      font-size: clamp(1rem, 3.5vw, 1.3rem);
-      font-weight: 600;
-      color: #374151;
+
+    /* SIDE MENU */
+    .side-menu {
+      display: none;
+      position: absolute;
+      top: 52px;
+      left: 0;
+      background: white;
+      width: 220px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      z-index: 300;
     }
-    nav {
-      background-color: white;
-      padding: 10px 0;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-    nav a {
-      color: #3b82f6;
+
+    .side-menu a {
+      display: block;
+      padding: 14px 18px;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: 600;
+      color: #1e3c72;
+      font-weight: 500;
     }
-    section {
-      max-width: 1100px;
+
+    .side-menu a:hover {
+      background: #f0f4ff;
+    }
+
+    /* MAIN NAV */
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 400;
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    }
+
+    .main-nav a,
+    .dropdown span {
+      text-decoration: none;
+      color: #2a5298;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* DROPDOWN */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0;
+      background: white;
+      min-width: 180px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      z-index: 300;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 12px 16px;
+      color: #1e3c72;
+    }
+
+    .dropdown-content a:hover {
+      background: #f0f4ff;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 850px;
       margin: auto;
-      padding: 30px 20px;
+      font-size: 1.05rem;
     }
+
+    section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
     h2 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      border-bottom: 3px solid #A0D6B4;
-      display: inline-block;
-      padding-bottom: 5px;
+      color: #1e3c72;
+      margin-bottom: 25px;
+      font-size: 2rem;
+      text-align: center;
     }
-    h3 {
-      margin-top: 30px;
-      font-weight: 600;
-      color: #2563eb;
-    }
+
+    /* VIDEOS */
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
     }
+
     iframe {
       width: 100%;
       height: 200px;
       border-radius: 12px;
       border: none;
     }
-    .video-grid.shorts iframe {
+
+    .shorts iframe {
       height: 360px;
       aspect-ratio: 9 / 16;
     }
+
     footer {
-      background-color: #1f2937;
+      background-color: #1e3c72;
       color: white;
       text-align: center;
-      padding: 20px 10px;
-      margin-top: 40px;
+      padding: 25px 15px;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #a9c9ff;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        scroll-margin-top: 110px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <div class="header-title">
-    <img src="../assets/img/web2.png" alt="Logo JSDev" class="header-logo" />
-    <div>
-      <h1>JSDev</h1>
-      <p class="header-subtitle">Desarrollo de Apps y Producción Multimedia</p>
-    </div>
+<!-- TOP BAR -->
+<header class="topbar">
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menú">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <img src="../assets/img/web2.png" alt="Logo JSDev" class="logo">
+
+  <div class="brand">
+    <span class="brand-title">JSDev</span>
+    <p>Apps Android · Producción multimedia</p>
   </div>
 </header>
 
-<nav>
+<!-- SIDE MENU -->
+<div id="sideMenu" class="side-menu">
+  <a href="../index.html#apps">Apps Android</a>
+  <a href="videos.html">Edición de Videos</a>
+  <a href="web.html">Diseño Web</a>
+</div>
+
+<!-- MAIN NAV -->
+<nav class="main-nav">
   <a href="../index.html">Inicio</a>
-  <a href="#cortos">Videos cortos</a>
-  <a href="#spots">Spots y eventos</a>
+  <a href="../index.html#sobre">Sobre mí</a>
+
+  <div class="dropdown">
+    <span>Proyectos ▾</span>
+    <div class="dropdown-content">
+      <a href="../index.html#apps">Apps Android</a>
+      <a href="videos.html">Edición de Videos</a>
+      <a href="web.html">Diseño Web</a>
+    </div>
+  </div>
+
+  <a href="servicios.html">Servicios</a>
+  <a href="../index.html#contacto">Contacto</a>
 </nav>
 
-<section id="cortos">
-  <h2>🎬 Videos cortos para redes sociales</h2>
+<!-- HERO -->
+<section class="hero">
+  <h1>Producción multimedia y edición de video</h1>
+  <p>
+    Desarrollo contenido audiovisual para redes sociales, eventos y proyectos digitales,
+    con enfoque en claridad, impacto visual y coherencia estética.
+  </p>
+</section>
 
-  <h3>YouTube</h3>
+<!-- VIDEOS -->
+<section>
+  <h2>Videos cortos para redes</h2>
+
   <div class="video-grid">
-    <iframe src="https://www.youtube.com/embed/JwRHb79M4so" title="Video YouTube JSDev" loading="lazy" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/suElwbrTsC0" title="Video YouTube JSDev" loading="lazy" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/vtKhIcwWQBk" title="Video YouTube JSDev" loading="lazy" allowfullscreen></iframe>
-  </div>
-
-  <h3>YouTube Shorts</h3>
-  <div class="video-grid shorts">
-    <iframe src="https://www.youtube.com/embed/kL66uixkUpo" title="YouTube Shorts JSDev" loading="lazy" allowfullscreen></iframe>
-  </div>
-
-  <h3>TikTok</h3>
-  <div class="video-grid shorts">
-    <iframe src="https://www.tiktok.com/embed/7537428908745018630" title="TikTok JSDev" loading="lazy" allowfullscreen></iframe>
-    <iframe src="https://www.tiktok.com/embed/7538132573797502213" title="TikTok JSDev" loading="lazy" allowfullscreen></iframe>
-  </div>
-
-  <h3>Instagram</h3>
-  <div class="video-grid shorts">
-    <iframe src="https://www.instagram.com/reel/DNOpAshv5vu/embed" title="Instagram Reel JSDev" loading="lazy" allowfullscreen></iframe>
-    <iframe src="https://www.instagram.com/reel/DIhofbZvvm_/embed" title="Instagram Reel JSDev" loading="lazy" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/JwRHb79M4so" loading="lazy" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/suElwbrTsC0" loading="lazy" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/vtKhIcwWQBk" loading="lazy" allowfullscreen></iframe>
   </div>
 </section>
 
-<section id="spots">
-  <h2>📢 Spots y proyecciones en eventos</h2>
-  <div class="video-grid">
-    <iframe src="https://www.youtube.com/embed/YUx_7JU1kWc" title="Spot evento JSDev" loading="lazy" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/mFnf-XqCxS8" title="Spot evento JSDev" loading="lazy" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/99dzAKrCQa4" title="Spot evento JSDev" loading="lazy" allowfullscreen></iframe>
+<section>
+  <h2>YouTube Shorts / Reels</h2>
+
+  <div class="video-grid shorts">
+    <iframe src="https://www.youtube.com/embed/kL66uixkUpo" loading="lazy" allowfullscreen></iframe>
+    <iframe src="https://www.instagram.com/reel/DNOpAshv5vu/embed" loading="lazy"></iframe>
+    <iframe src="https://www.instagram.com/reel/DIhofbZvvm_/embed" loading="lazy"></iframe>
   </div>
-  <p>Spots proyectados durante la Fiesta de la Cultura y el Deporte del Fortín.</p>
+</section>
+
+<section>
+  <h2>Spots y proyecciones en eventos</h2>
+
+  <div class="video-grid">
+    <iframe src="https://www.youtube.com/embed/YUx_7JU1kWc" loading="lazy" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/mFnf-XqCxS8" loading="lazy" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/99dzAKrCQa4" loading="lazy" allowfullscreen></iframe>
+  </div>
+  <p>Spots proyectados durante la Fiesta de la Cultura y el Deporte del Fortín - Córdoba - Argentina.</p>
 </section>
 
 <footer>
-  <p>&copy; 2025 JSDev – Todos los derechos reservados.</p>
+  <p>© 2026 JSDev – Desarrollo de Apps Android y Producción Multimedia</p>
 </footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("sideMenu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+</script>
 
 </body>
 </html>
