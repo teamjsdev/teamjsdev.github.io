@@ -1,23 +1,29 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JSDev - Portafolio Multimedia</title>
-  <meta name="description" content="Portafolio multimedia de JSDev: videos cortos para redes, spots para eventos y desarrollo web." />
+
+  <title>JSDev – Portafolio Multimedia y Producción Audiovisual</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Portafolio multimedia de JSDev: producción de videos cortos para redes sociales, spots para eventos y desarrollo web." />
+  <meta name="author" content="Joaquin Sanchez" />
+
+  <!-- Fuente -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-<!-- Google Analytics -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8FVHCZT452"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-8FVHCZT452');
-</script>
-   <!-- Fin Google Analytics -->
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FVHCZT452"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8FVHCZT452');
+  </script>
 
   <style>
     body {
@@ -29,31 +35,27 @@
     }
     header {
       background: linear-gradient(135deg, #B7EAD3, #A0D6B4);
-      color: #1f2937;
       padding: 10px 16px;
     }
     .header-title {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
       gap: 12px;
       flex-wrap: wrap;
-      text-align: left;
     }
-    .header-title h1 {
-      font-size: clamp(1.4rem, 4.5vw, 2.2rem);
-      line-height: 1.3;
+    .header-logo {
+      width: clamp(50px, 12vw, 80px);
+      height: clamp(50px, 12vw, 80px);
+      object-fit: contain;
+    }
+    h1 {
+      font-size: clamp(1.5rem, 4.5vw, 2.2rem);
       margin: 0;
     }
     .header-subtitle {
       font-size: clamp(1rem, 3.5vw, 1.3rem);
       font-weight: 600;
       color: #374151;
-    }
-    .header-logo {
-      width: clamp(50px, 12vw, 80px);
-      height: clamp(50px, 12vw, 80px);
-      object-fit: contain;
     }
     nav {
       background-color: white;
@@ -96,20 +98,8 @@
       border: none;
     }
     .video-grid.shorts iframe {
-      height: 360px;  /* Más alto para videos verticales */
-      aspect-ratio: 9 / 16;  /* Proporción vertical */
-    }
-    .web-project {
-      text-align: center;
-      border: 2px dashed #9ca3af;
-      padding: 40px 20px;
-      border-radius: 12px;
-      color: #6b7280;
-      font-weight: 600;
-      font-size: 1.2rem;
-      background-color: #f3f4f6;
-      max-width: 600px;
-      margin: 0 auto;
+      height: 360px;
+      aspect-ratio: 9 / 16;
     }
     footer {
       background-color: #1f2937;
@@ -120,74 +110,66 @@
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <div class="header-title">
-      <img src="../assets/img/web2.png" alt="Logo JSDev" class="header-logo" />
-      <div>
-        <h1>JSDev</h1>
-        <p class="header-subtitle">Desarrollo de Apps y Producción Multimedia</p>
-      </div>
+<header>
+  <div class="header-title">
+    <img src="../assets/img/web2.png" alt="Logo JSDev" class="header-logo" />
+    <div>
+      <h1>JSDev</h1>
+      <p class="header-subtitle">Desarrollo de Apps y Producción Multimedia</p>
     </div>
-  </header>
+  </div>
+</header>
 
-  <nav>
-    <a href="../index.html">Inicio</a>
-    <a href="#cortos">Videos Cortos</a>
-    <a href="#spots">Spots y Eventos</a>
-  </nav>
+<nav>
+  <a href="../index.html">Inicio</a>
+  <a href="#cortos">Videos cortos</a>
+  <a href="#spots">Spots y eventos</a>
+</nav>
 
-  <section id="cortos">
-    <h2>🎬 Youtube y videos cortos para redes sociales</h2>
+<section id="cortos">
+  <h2>🎬 Videos cortos para redes sociales</h2>
 
-    <h3>YouTube</h3>
-    <div class="video-grid">
-      <iframe src="https://www.youtube.com/embed/JwRHb79M4so" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/suElwbrTsC0" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/vtKhIcwWQBk" allowfullscreen></iframe>
+  <h3>YouTube</h3>
+  <div class="video-grid">
+    <iframe src="https://www.youtube.com/embed/JwRHb79M4so" title="Video YouTube JSDev" loading="lazy" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/suElwbrTsC0" title="Video YouTube JSDev" loading="lazy" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/vtKhIcwWQBk" title="Video YouTube JSDev" loading="lazy" allowfullscreen></iframe>
+  </div>
 
-    </div>
+  <h3>YouTube Shorts</h3>
+  <div class="video-grid shorts">
+    <iframe src="https://www.youtube.com/embed/kL66uixkUpo" title="YouTube Shorts JSDev" loading="lazy" allowfullscreen></iframe>
+  </div>
 
-    <h3>Youtube Shorts</h3>
-    <div class="video-grid shorts">
-      <iframe src="https://www.youtube.com/embed/kL66uixkUpo" allowfullscreen></iframe>
+  <h3>TikTok</h3>
+  <div class="video-grid shorts">
+    <iframe src="https://www.tiktok.com/embed/7537428908745018630" title="TikTok JSDev" loading="lazy" allowfullscreen></iframe>
+    <iframe src="https://www.tiktok.com/embed/7538132573797502213" title="TikTok JSDev" loading="lazy" allowfullscreen></iframe>
+  </div>
 
-    </div>
+  <h3>Instagram</h3>
+  <div class="video-grid shorts">
+    <iframe src="https://www.instagram.com/reel/DNOpAshv5vu/embed" title="Instagram Reel JSDev" loading="lazy" allowfullscreen></iframe>
+    <iframe src="https://www.instagram.com/reel/DIhofbZvvm_/embed" title="Instagram Reel JSDev" loading="lazy" allowfullscreen></iframe>
+  </div>
+</section>
 
-    <h3>TikTok</h3>
-    <div class="video-grid shorts">
-      <iframe src="https://www.tiktok.com/embed/7537428908745018630" allowfullscreen></iframe>
-      <iframe src="https://www.tiktok.com/embed/7538132573797502213" allowfullscreen></iframe>
+<section id="spots">
+  <h2>📢 Spots y proyecciones en eventos</h2>
+  <div class="video-grid">
+    <iframe src="https://www.youtube.com/embed/YUx_7JU1kWc" title="Spot evento JSDev" loading="lazy" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/mFnf-XqCxS8" title="Spot evento JSDev" loading="lazy" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/99dzAKrCQa4" title="Spot evento JSDev" loading="lazy" allowfullscreen></iframe>
+  </div>
+  <p>Spots proyectados durante la Fiesta de la Cultura y el Deporte del Fortín.</p>
+</section>
 
-    </div>
-
-    <h3>Instagram</h3>
-    <div class="video-grid shorts">
-      <iframe src="https://www.instagram.com/reel/DNOpAshv5vu/embed" allowfullscreen></iframe>
-      <iframe src="https://www.instagram.com/reel/DIhofbZvvm_/embed" allowfullscreen></iframe>
-    </div>
-
-  </section>
-
-  <section id="spots">
-    <h2>📢 Spots y proyecciones en eventos</h2>
-    <div class="video-grid">
-      <iframe src="https://www.youtube.com/embed/YUx_7JU1kWc" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/mFnf-XqCxS8" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/99dzAKrCQa4" allowfullscreen></iframe>
-    </div>
-    <p>Spots proyectados durante la Fiesta de la Cultura y el Deporte del Fortín.</p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 JSDev - Todos los derechos reservados.</p>
-  </footer>
+<footer>
+  <p>&copy; 2025 JSDev – Todos los derechos reservados.</p>
+</footer>
 
 </body>
 </html>
-
-
-
-
-
